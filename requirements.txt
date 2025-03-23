@@ -1,0 +1,10 @@
+torch>=2.0.0
+transformers>=4.28.0
+networkx>=3.0
+pyyaml>=6.0
+tqdm>=4.65.0
+scikit-learn>=1.2.0
+pandas>=1.5.0
+quickumls-api>=1.4
+python-dotenv>=0.21.0
+wandb>=0.15.0
