@@ -1,0 +1,24 @@
+data_sources:
+  mimic:
+    path: "./raw/mimic-iii"
+    tables:
+      - patients
+      - admissions
+      - noteevents
+
+  umls:
+    version: "2023AA"
+    allowed_sources: ["SNOMEDCT_US", "ICD10CM", "RXNORM"]
+    relation_types:
+      - "treats"
+      - "diagnoses"
+      - "may_prevent"
+
+  hetionet:
+    node_types:
+      - "Disease"
+      - "Compound"
+      - "Side Effect"
+    edge_types:
+      - "CtD" # Compound treats Disease
+      - "CuD" # Compound causes Disease

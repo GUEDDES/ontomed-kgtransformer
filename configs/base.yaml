@@ -1,0 +1,21 @@
+# configs/base.yaml
+defaults:
+  - _self_
+  - override /data: mimic_iii
+  - override /model: kgtransformer
+
+seed: 42
+log_dir: "logs/"
+device: "cuda:0"
+
+data:
+  mimic_path: "data/mimic-iii/"
+  kg_path: "data/hetionet/"
+  max_seq_length: 512
+  umls_relations: ["treats", "diagnoses", "associated_with"]
+
+model:
+  hidden_dim: 768
+  kg_embed_dim: 256
+  num_attention_heads: 8
+  temperature: 0.07
